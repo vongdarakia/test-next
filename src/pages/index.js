@@ -2,10 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-const imagePrefix = `https://vongdarakia.github.io/test-nextjs`;
+const imagePrefix =
+    process.env.NODE_ENV === "production" ? `https://vongdarakia.github.io/test-nextjs` : "";
 
 const imageLoader = ({ src }) => {
-    return `${imagePrefix}/${src}`;
+    return `${imagePrefix}${src}`;
 };
 
 export default function Home() {
