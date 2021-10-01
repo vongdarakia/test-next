@@ -65,6 +65,7 @@ export default function Home() {
                     Powered by{" "}
                     <span className={styles.logo}>
                         <Image
+                            unoptimized
                             loader={imageLoader}
                             src="/vercel.svg"
                             alt="Vercel Logo"
