@@ -1,12 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { getImagePath, imagePrefix } from "../utils/getImagePath";
 
-const imagePrefix =
-    process.env.NODE_ENV === "production" ? `https://vongdarakia.github.io/test-nextjs` : "";
-
-const imageLoader = ({ src }) => {
-    console.log({ env: process.env.NODE_ENV });
+const imageLoader = ({ src, width, height }) => {
     return `${imagePrefix}${src}`;
 };
 
@@ -21,9 +18,8 @@ export default function Home() {
 
             <main className={styles.main}>
                 <Image
-                    unoptimized
                     loader={imageLoader}
-                    src="/images/random-picture.jpeg"
+                    src={getImagePath("/images/random-picture.jpeg")}
                     alt="Random image"
                     width={300}
                     height={300}
@@ -39,7 +35,6 @@ export default function Home() {
                     Powered by{" "}
                     <span className={styles.logo}>
                         <Image
-                            unoptimized
                             loader={imageLoader}
                             src="/vercel.svg"
                             alt="Vercel Logo"
