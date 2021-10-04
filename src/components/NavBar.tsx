@@ -5,7 +5,7 @@ import { MenuItem, NavLink } from "./NavLink";
 const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: fit-content;
     padding: 30px;
     border: 1px solid black;
 `;

@@ -8,6 +8,7 @@ export type MenuItem = {
 };
 
 const StyledLink = styled.a<{ isSelected?: boolean }>`
+    margin: 0 12px;
     color: ${({ isSelected }) => (isSelected ? "red" : "initial")};
 `;
 
