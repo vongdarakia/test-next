@@ -6,6 +6,7 @@ const imagePrefix =
     process.env.NODE_ENV === "production" ? `https://vongdarakia.github.io/test-nextjs` : "";
 
 const imageLoader = ({ src }) => {
+    console.log({ env: process.env.NODE_ENV });
     return `${imagePrefix}${src}`;
 };
 
