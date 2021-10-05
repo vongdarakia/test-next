@@ -1,11 +1,10 @@
+import { LayoutContext } from "contexts/LayoutContext";
 import { NavBar } from "./NavBar";
 
 export const Header = () => {
-    const menuItems = [
-        { name: "Home", path: "/" },
-        { name: "Animations", path: "/animations" },
-        { name: "Something", path: "/something/something-child" },
-    ];
-
-    return <NavBar menuItems={menuItems} />;
+    return (
+        <LayoutContext.Consumer>
+            {({ menuItems }) => <NavBar menuItems={menuItems} />}
+        </LayoutContext.Consumer>
+    );
 };
