@@ -1,5 +1,5 @@
-import { Image } from "../components/Image";
-import { MainLayout } from "../components/MainLayout";
+import { Image } from "../components/common/Image";
+import { MainLayout } from "../components/common/MainLayout";
 
 export default function Home() {
     return (
