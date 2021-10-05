@@ -1,6 +1,6 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { getImagePath } from "../../utils/getImagePath";
+import styles from "styles/Home.module.css";
+import { getImagePath } from "utils/getImagePath";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 

@@ -1,5 +1,5 @@
 import NextImage, { ImageProps } from "next/image";
-import { getImagePath } from "../../utils/getImagePath";
+import { getImagePath } from "utils/getImagePath";
 
 export const Image = (props: ImageProps) => {
     return (
